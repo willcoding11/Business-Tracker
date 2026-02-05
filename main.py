@@ -2,11 +2,12 @@ import pygame
 
 pygame.init()
 
-window = pygame.display.set_mode((800, 600))
+window = pygame.display.set_mode((800, 500))
 
 pygame.display.set_caption("AI Business Tracker")
 
-BG = (189, 244, 255) # Light blue
+HEADER_COLOR = (59, 190, 255)
+BG = (255, 255, 255) # Light blue
 
 run = True
 
@@ -16,6 +17,7 @@ while run:
             run = False
 
     window.fill(BG)
+    pygame.draw.rect(window, HEADER_COLOR, (0, 0, 800, 75))
 
     pygame.display.flip()
 
